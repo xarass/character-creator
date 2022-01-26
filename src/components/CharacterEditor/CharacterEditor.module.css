@@ -1,6 +1,8 @@
 .characterEditor {
   padding-top: 128px;
   padding-bottom: 64px;
+  overflow: auto;
+  isolation: isolate;
 }
 
 .background {
@@ -44,4 +46,39 @@
 
 .controlColumn {
   width: 50%;
+}
+
+
+/* Mobile stuff section */
+@media (max-width: 768px) {
+  .characterEditor {
+    padding-top: 24px;
+    min-height: 100%;
+  }
+
+  .maxWidthWrapper {
+    min-height: 100vh;
+  }
+
+  .characterWrapper {
+    left: 0;
+    z-index: 1;
+  }
+
+  .header {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+  }
+
+  .controlColumn {
+    width: 100%;
+    overflow: auto;
+    white-space: nowrap;
+    position: absolute;
+    bottom: 128px;
+    z-index: 2;
+    margin-left: -32px;
+    padding-left:32px;
+  }
 }
